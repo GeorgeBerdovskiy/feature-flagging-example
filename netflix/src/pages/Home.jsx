@@ -1,18 +1,14 @@
-import React, { useState } from 'react'
-import MovieCard from '../components/MovieCard'
-
-// Import components
-import NavigationBar from '../components/NavigationBar'
+import React from 'react';
+import MovieCard from '../components/MovieCard';
 
 // Import images
-import WarDogs from '../assets/images/JPGs/WarDogs.jpg'
-import MisterFox from '../assets/images/JPGs/MisterFox.jpg'
-import HacksawRidge from '../assets/images/JPGs/HacksawRidge.jpg'
-import SisterAct from '../assets/images/JPGs/SisterAct.jpg'
-import Stripes from '../assets/images/JPGs/Stripes.jpg'
+import WarDogs from '../assets/images/JPGs/WarDogs.jpg';
+import MisterFox from '../assets/images/JPGs/MisterFox.jpg';
+import HacksawRidge from '../assets/images/JPGs/HacksawRidge.jpg';
+import SisterAct from '../assets/images/JPGs/SisterAct.jpg';
+import Stripes from '../assets/images/JPGs/Stripes.jpg';
 
 const Home = (props) => {
-
 	const movies = [
 		{
 			title: "War Dogs",
@@ -39,7 +35,7 @@ const Home = (props) => {
 			poster: Stripes,
 			description: "Two friends (Bill Murray and Harold Ramis) who are dissatisfied with their jobs decide to join the army for a bit of fun."
 		}
-	]
+	];
 
 	return (
 		<main className="padded">
@@ -49,7 +45,7 @@ const Home = (props) => {
 				{movies.map((object, i) => <MovieCard movie={object}/>)}
 			</div>
 		</main>
-	)
+	);
 }
 
-export default Home
+export default Home;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // Import images
 import Netflix from '../assets/images/PNGs/Netflix.png'
@@ -6,7 +6,7 @@ import Netflix from '../assets/images/PNGs/Netflix.png'
 const NavigationBar = (props) => {
 	return (
 		<nav>
-			<img src={Netflix}/>
+			<img src={Netflix} alt="Netflix" />
 		</nav>
 	)
 }
