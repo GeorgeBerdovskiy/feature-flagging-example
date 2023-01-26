@@ -8,7 +8,26 @@ import HacksawRidge from '../assets/images/JPGs/HacksawRidge.jpg';
 import SisterAct from '../assets/images/JPGs/SisterAct.jpg';
 import Stripes from '../assets/images/JPGs/Stripes.jpg';
 
+// Import tools from Unleash
+import { useVariant } from '@unleash/proxy-client-react';
+
 const Home = (props) => {
+	const variant = useVariant('AddButton');
+
+	function buttonClass() {
+		switch (variant.name) {
+			case "Filled":
+				return 'filled';
+			case "Ghost":
+				return 'ghost';
+			case "TextOnly":
+				return "text-only"
+			default:
+				// Theoretically shouldn't happen
+				return "filled"
+		}
+	}
+	
 	const movies = [
 		{
 			title: "War Dogs",
@@ -42,7 +61,7 @@ const Home = (props) => {
 			<div className="small-width">
 				<h1 className="margin-bottom">Browse DVDs</h1>
 
-				{movies.map((object, i) => <MovieCard movie={object}/>)}
+				{movies.map((object, i) => <MovieCard movie={object} buttonClass={`${ buttonClass() }`}/>)}
 			</div>
 		</main>
 	);
