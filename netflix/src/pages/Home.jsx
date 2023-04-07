@@ -9,6 +9,10 @@ import SisterAct from '../assets/images/JPGs/SisterAct.jpg';
 import Stripes from '../assets/images/JPGs/Stripes.jpg';
 
 const Home = (props) => {
+	function buttonClass() {
+		return "filled"
+	}
+	
 	const movies = [
 		{
 			title: "War Dogs",
@@ -42,7 +46,7 @@ const Home = (props) => {
 			<div className="small-width">
 				<h1 className="margin-bottom">Browse DVDs</h1>
 
-				{movies.map((object, i) => <MovieCard movie={object}/>)}
+				{movies.map((object, i) => <MovieCard movie={object} buttonClass={`${ buttonClass() }`}/>)}
 			</div>
 		</main>
 	);

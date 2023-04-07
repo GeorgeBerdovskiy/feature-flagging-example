@@ -23,7 +23,7 @@ const MovieCard = (props) => {
 				<h1 className="margin-bottom-half">{ title }</h1>
 				<p className="margin-bottom-half">{ description }</p>
 				
-				<button>Add DVD</button>
+				<button className={`${ props.buttonClass ? props.buttonClass : 'filled' }`}>Add DVD</button>
 			</div>
 		</div>
 	);
