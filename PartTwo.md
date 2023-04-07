@@ -84,12 +84,6 @@ function buttonClass() {
 }
 ```
 
-Finally, go to `MovieCard.jsx` and replace `<button>Add DVD</button>` with...
-
-```jsx
-<button className={`${ props.buttonClass ? props.buttonClass : 'filled' }`}>Add DVD</button>
-```
-
 #### Step Five | Confirm Your Results
 Time to make sure we didn't mess anything up! Run `npm start` and try opening your site (which should be located at `localhost:3000`) in three different web browsers. Hopefully, each one has a different button style that persists between page loads! This is what I saw when I opened it in Chrome, Firefox, and Safari -
 
