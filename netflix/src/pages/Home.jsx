@@ -8,9 +8,24 @@ import HacksawRidge from '../assets/images/JPGs/HacksawRidge.jpg';
 import SisterAct from '../assets/images/JPGs/SisterAct.jpg';
 import Stripes from '../assets/images/JPGs/Stripes.jpg';
 
+// Import tools from Unleash
+import { useVariant } from '@unleash/proxy-client-react';
+
 const Home = (props) => {
+	const variant = useVariant('Button');
+
 	function buttonClass() {
-		return "filled"
+		switch (variant.name) {
+		case "Fill":
+			return 'filled';
+		case "Ghost":
+			return 'ghost';
+		case "Clear":
+			return "text-only"
+		default:
+			// Theoretically shouldn't happen
+			return "filled"
+		}
 	}
 	
 	const movies = [
