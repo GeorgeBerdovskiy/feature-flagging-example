@@ -1,6 +1,5 @@
 # Part Two
 ## React and Feature Toggles
----
 #### Step One | Install Dependencies
 We'll need to install a few dependencies first. Just run `npm install` and you'll be good! If you open `package.json`, you'll see that one of the packages we're using is `@unleash/proxy-client-react`. This is what we'll be using to community with our Unsplash proxy.
 
@@ -9,11 +8,11 @@ In the project repository, create a new file called `.env.local`. This is where 
 
 Go back to your Unleash administrator dashboard at `localhost:4242`. Go to **Configure > API Access > New API Token**. Use any name and select the frontend option as shown.
 
-![[Screenshots/06.png]]
+![Screenshot](Screenshots/06.png)
 
 When finished, you'll be shown the token. Press the clipboard icon on the right to copy it. Don't worry if you closed it too soon - you can still see and copy it from the list!
 
-![[SScreenshots/07.png]]
+![Screenshot](Screenshots/07.png)
 
 Now head over to your `.env.local` file and throw in the following, but replace the key with the one you were given.
 
@@ -94,6 +93,6 @@ Finally, go to `MovieCard.jsx` and replace `<button>Add DVD</button>` with...
 #### Step Five | Confirm Your Results
 Time to make sure we didn't mess anything up! Run `npm start` and try opening your site (which should be located at `localhost:3000`) in three different web browsers. Hopefully, each one has a different button style that persists between page loads! This is what I saw when I opened it in Chrome, Firefox, and Safari -
 
-![[Screenshots/08.png]]
-![[Screenshots/09.png]]
-![[Screenshots/10.png]]
+![Screenshot](Screenshots/08.png)
+![Screenshot](Screenshots/09.png)
+![Screenshot](Screenshots/10.png)
